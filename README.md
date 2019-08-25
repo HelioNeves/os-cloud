@@ -24,30 +24,24 @@ A **[Google Cloud Platform](https://console.cloud.google.com/?hl=pt-BR "Google C
 
 ### Install
 
-###### 1. Open the awesome Google Cloud Shell :shell:
+###### 1. Click to open this project on Google Cloud Shell :shell:
 
-- [GCS](https://cloud.google.com/shell/ "GCS") 
+- [Google Cloud Shell](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/HelioNeves/os-cloud "GCS") 
 
-###### 2. Clone this repo :pizza:
-
-```bash
-git clone https://github.com/HelioNeves/os-cloud.git
-cd /os-cloud
-```
-###### 3. Create a docker volume :cd:
+###### 2. Create a docker volume :cd:
 > a docker volume called os
 
 ```bash
 docker volume create os
 ```
 
-###### 4. Basic building :wrench:
+###### 3. Basic building :wrench:
 
 ```bash
 docker build . -t os-cloud
 ```
 
-###### 5.  Load ubuntu layer :rainbow:
+###### 4.  Load ubuntu layer :rainbow:
 > aka: your new way to use a VM
 
 ```bash
