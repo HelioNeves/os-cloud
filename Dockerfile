@@ -1,4 +1,4 @@
-# Use an official Ubuntu runtime as a parent image
+ # Use an official Ubuntu runtime as a parent image
 FROM ubuntu:latest
 
 # Ensure that all is up-to-date
@@ -15,8 +15,12 @@ RUN sudo apt-get install build-essential -y
 # Set user profile
 USER docker
 
-# Set the working directory to /app
-WORKDIR /app
+# Create user folder and give permission
+RUN mkdir "/home/docker" && \
+  chown -R docker:docker "/home/docker"
 
-# Copy the current directory contents into the container at /app
-ADD . /app
+# Set the working directory to /app
+WORKDIR /home/docker
+
+# Copy the current directory contents into the container at /home/docker
+ADD . /home/docker
