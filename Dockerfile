@@ -16,10 +16,9 @@ RUN sudo apt-get install build-essential -y
 USER docker
 
 # Create user folder and give permission
-RUN mkdir "/home/docker" && \
-  chown -R docker:docker "/home/docker"
+RUN chown -R docker:docker "/home/docker"
 
-# Set the working directory to /app
+# Set the working directory to /home/docker
 WORKDIR /home/docker
 
 # Copy the current directory contents into the container at /home/docker
